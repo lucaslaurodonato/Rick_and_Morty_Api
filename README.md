@@ -1,11 +1,17 @@
 ### **<h2>Rick and Morty Api</h2>**
 
-### **<h4>App made using Rick and Morty api</h4>**
+### **App made using Rick and Morty api**
+Work in progress.:writing_hand:
+
 
 <img src="https://user-images.githubusercontent.com/47648982/156233229-197b6f4c-c77d-4165-b870-4cbe9a20df67.png" width="20%" style="max-width:40%;"/><img src="https://user-images.githubusercontent.com/47648982/156233230-e3a06d9c-4d7c-4987-b272-4b267f896975.png" width="20%" style="max-width:40%;"/> 
 
-<h1>:page_with_curl:Api Documentation</h1>
-<a href="https://rickandmortyapi.com/" rel="nofollow"> Documentation </a>
+### :page_with_curl: *API*.  
+- **Link. content**: (https://rickandmortyapi.com/)
+- Api call example: (https://rickandmortyapi.com/api/character) 
+
+### *About API*. 
+<p>The Rick and Morty API is a REST(ish) and GraphQL API based on the television show Rick and Morty. You will have access to about hundreds of characters, images, locations and episodes. The Rick and Morty API is filled with canonical information as seen on the TV show.</p>
 
 <h1>:rocket: Technologies</h1>  
 
