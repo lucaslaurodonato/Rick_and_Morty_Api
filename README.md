@@ -6,6 +6,9 @@ Work in progress.:writing_hand:
 
 <img src="https://user-images.githubusercontent.com/47648982/156233229-197b6f4c-c77d-4165-b870-4cbe9a20df67.png" width="20%" style="max-width:40%;"/><img src="https://user-images.githubusercontent.com/47648982/156233230-e3a06d9c-4d7c-4987-b272-4b267f896975.png" width="20%" style="max-width:40%;"/> 
 
+<p><a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/47648982/156235694-a701762f-21fb-4e61-aa4b-03c18bb476ab.gif"><img src="https://user-images.githubusercontent.com/47648982/156235694-a701762f-21fb-4e61-aa4b-03c18bb476ab.gif" align="right" width="20%" style="max-width:100%;"></a></p>
+
+
 ### :page_with_curl: *API*.  
 - **Link. content**: (https://rickandmortyapi.com/)
 - Api call example: (https://rickandmortyapi.com/api/character) 
@@ -23,6 +26,7 @@ Work in progress.:writing_hand:
   <li><a href="https://developer.android.com/topic/libraries/architecture/paging/v3-overview" rel="nofollow">Paging 3</a></li>
    <li><a href="https://developer.android.com/jetpack/androidx/releases/room?gclid=CjwKCAiApfeQBhAUEiwA7K_UH253BmKeDQkViN8W4DcKXAsO7TsEilxpbkSb8ZUw0yGsq5aDkc6e1RoCXCYQAvD_BwE&gclsrc=aw.ds" rel="nofollow">Room</a></li>
 </ul>
+
 
 <h1>:muscle: How to contribute?</h1>
 
