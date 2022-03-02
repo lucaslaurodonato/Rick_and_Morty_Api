@@ -4,7 +4,7 @@
 Work in progress.:writing_hand:
 
 
-<img src="https://user-images.githubusercontent.com/47648982/156233229-197b6f4c-c77d-4165-b870-4cbe9a20df67.png" width="20%" style="max-width:40%;"/><img src="https://user-images.githubusercontent.com/47648982/156233230-e3a06d9c-4d7c-4987-b272-4b267f896975.png" width="20%" style="max-width:40%;"/> 
+<img src="https://user-images.githubusercontent.com/47648982/156233229-197b6f4c-c77d-4165-b870-4cbe9a20df67.png" width="20%" style="max-width:40%;"/>                     <img src="https://user-images.githubusercontent.com/47648982/156233230-e3a06d9c-4d7c-4987-b272-4b267f896975.png" width="20%" style="max-width:40%;"/> 
 
 <p><a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/47648982/156235694-a701762f-21fb-4e61-aa4b-03c18bb476ab.gif"><img src="https://user-images.githubusercontent.com/47648982/156235694-a701762f-21fb-4e61-aa4b-03c18bb476ab.gif" align="right" width="20%" style="max-width:100%;"></a></p>
 
