@@ -28,22 +28,6 @@ class RickyMortyPagingSource(private val webService: WebService) : PagingSource<
         } catch (e: Exception) {
             LoadResult.Error(e)
         }
-
-        //        return try {
-        //            val currentPage = params.key ?: 1
-        //            val response = apiService.getAllCharacters(currentPage)
-        //            val responseData = mutableListOf<RickMorty>()
-        //            val data = response.body()?.results ?: emptyList()
-        //            responseData.addAll(data)
-        //
-        //            LoadResult.Page(
-        //                data = responseData,
-        //                prevKey = if (currentPage == 1) null else -1,
-        //                nextKey = currentPage.plus(1)
-        //            )
-        //        } catch (e: Exception) {
-        //            LoadResult.Error(e)
-        //        }
     }
 
     override fun getRefreshKey(state: PagingState<Int, RickMorty>): Int? {

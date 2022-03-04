@@ -12,4 +12,9 @@ object Constants {
 
     const val ITEMS_PER_PAGE = 10
 
+    ///Status types
+    const val ALIVE = "Alive"
+    const val DEAD = "Dead"
+    const val UNKNOWN = "unknown"
+
 }

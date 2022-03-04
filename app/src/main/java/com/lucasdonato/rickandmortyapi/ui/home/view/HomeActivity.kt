@@ -7,7 +7,7 @@ import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.ExperimentalPagingApi
 import com.lucasdonato.rickandmortyapi.R
-import com.lucasdonato.rickandmortyapi.databinding.ActivityMainBinding
+import com.lucasdonato.rickandmortyapi.databinding.ActivityHomeBinding
 import com.lucasdonato.rickandmortyapi.ui.home.adapter.CharacterAdapter
 import com.lucasdonato.rickandmortyapi.ui.home.viewmodel.HomeViewModel
 import com.lucasdonato.rickandmortyapi.utils.base.BaseActivity
@@ -17,7 +17,7 @@ import kotlinx.coroutines.flow.collectLatest
 
 @ExperimentalPagingApi
 @AndroidEntryPoint
-class HomeActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
+class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
 
     companion object {
         fun getStartIntent(context: Context) = Intent(context, HomeActivity::class.java)

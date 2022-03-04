@@ -1,4 +1,4 @@
-package com.lucasdonato.rickandmortyapi.ui.splash
+package com.lucasdonato.rickandmortyapi.ui.splash.view
 
 import android.os.Bundle
 import android.os.Handler
