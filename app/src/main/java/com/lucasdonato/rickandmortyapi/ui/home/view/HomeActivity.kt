@@ -7,13 +7,17 @@ import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.ExperimentalPagingApi
 import com.lucasdonato.rickandmortyapi.R
+import com.lucasdonato.rickandmortyapi.data.model.RickMorty
 import com.lucasdonato.rickandmortyapi.databinding.ActivityHomeBinding
 import com.lucasdonato.rickandmortyapi.ui.home.adapter.CharacterAdapter
+import com.lucasdonato.rickandmortyapi.ui.home.adapter.CharacterInfoDialog
 import com.lucasdonato.rickandmortyapi.ui.home.viewmodel.HomeViewModel
 import com.lucasdonato.rickandmortyapi.utils.base.BaseActivity
+import com.lucasdonato.rickandmortyapi.utils.extensions.toast
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.onCompletion
 
 @ExperimentalPagingApi
 @AndroidEntryPoint
@@ -33,11 +37,20 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
     }
 
     private fun setupRecyclerView() {
-        binding.adapter = CharacterAdapter()
+        binding.adapter = CharacterAdapter { item, _ ->
+            openDialog(item)
+        }
     }
 
     private fun closeApp() {
         binding.include.activity = this
+    }
+
+    private fun openDialog(rickMorty: RickMorty) {
+        CharacterInfoDialog(owner = this@HomeActivity, rickMorty).apply {
+            setCancelable(true)
+            show()
+        }
     }
 
     private fun loadData() = lifecycleScope.launch {

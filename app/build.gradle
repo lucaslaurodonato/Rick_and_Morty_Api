@@ -88,6 +88,9 @@ dependencies {
     //Lottie
     implementation "com.airbnb.android:lottie:$lottieVersion"
 
+    // Glide (Image loader)
+    implementation "com.github.bumptech.glide:glide:$glide"
+
     //Test
     def j_unit = "4.+"
     def j_unit_ext = "1.1.3"

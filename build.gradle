@@ -45,6 +45,9 @@ ext {
     //Lottie
     lottieVersion = "3.7.1"
 
+    // Image loading
+    glide = "4.9.0"
+
 }
 
 task clean(type: Delete) {
