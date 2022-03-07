@@ -1,14 +1,15 @@
 package com.lucasdonato.rickandmortyapi.data.model
 
-data class RickMorty(
-    val created: String,
-    val episode: List<String>,
-    val gender: String,
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
+data class RickAndMortyEntity(
+    @PrimaryKey(autoGenerate = false)
     val id: Int,
     val image: String,
     val name: String,
     val species: String,
     val status: String,
-    val type: String,
-    val url: String
+    val gender: String
 )

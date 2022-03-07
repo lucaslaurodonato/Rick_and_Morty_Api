@@ -5,28 +5,22 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import coil.load
-import com.lucasdonato.rickandmortyapi.R
-import com.lucasdonato.rickandmortyapi.data.model.RickMorty
+import com.lucasdonato.rickandmortyapi.data.model.RickAndMorty
 import com.lucasdonato.rickandmortyapi.databinding.ViewCharacterBinding
 import com.lucasdonato.rickandmortyapi.ui.home.adapter.CharacterAdapter.ImageViewHolder
-import com.lucasdonato.rickandmortyapi.utils.constants.Constants.ALIVE
-import com.lucasdonato.rickandmortyapi.utils.constants.Constants.DEAD
-import com.lucasdonato.rickandmortyapi.utils.constants.Constants.UNKNOWN
-import com.lucasdonato.rickandmortyapi.utils.extensions.setTint
 
-class CharacterAdapter(private val onItemClick: ((item: RickMorty, index: Int) -> Unit)? = null) :
-    PagingDataAdapter<RickMorty, ImageViewHolder>(diffCallback) {
+class CharacterAdapter(private val onItemClick: ((item: RickAndMorty, index: Int) -> Unit)? = null) :
+    PagingDataAdapter<RickAndMorty, ImageViewHolder>(diffCallback) {
 
     inner class ImageViewHolder(val binding: ViewCharacterBinding) : ViewHolder(binding.root)
 
     companion object {
-        val diffCallback = object : DiffUtil.ItemCallback<RickMorty>() {
-            override fun areItemsTheSame(oldItem: RickMorty, newItem: RickMorty): Boolean {
+        val diffCallback = object : DiffUtil.ItemCallback<RickAndMorty>() {
+            override fun areItemsTheSame(oldItem: RickAndMorty, newItem: RickAndMorty): Boolean {
                 return oldItem.id == newItem.id
             }
 
-            override fun areContentsTheSame(oldItem: RickMorty, newItem: RickMorty): Boolean {
+            override fun areContentsTheSame(oldItem: RickAndMorty, newItem: RickAndMorty): Boolean {
                 return oldItem == newItem
             }
         }

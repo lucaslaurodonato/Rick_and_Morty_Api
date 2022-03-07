@@ -7,7 +7,7 @@
 
         <variable
             name="rickAndMorty"
-            type="com.lucasdonato.rickandmortyapi.data.model.RickMorty" />
+            type="com.lucasdonato.rickandmortyapi.data.model.RickAndMorty" />
 
     </data>
 

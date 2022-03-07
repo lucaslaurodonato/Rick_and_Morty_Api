@@ -2,12 +2,12 @@ package com.lucasdonato.rickandmortyapi.data.paging
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.lucasdonato.rickandmortyapi.data.model.RickMorty
+import com.lucasdonato.rickandmortyapi.data.model.RickAndMorty
 import com.lucasdonato.rickandmortyapi.data.remote.WebService
 
-class RickyMortyPagingSource(private val webService: WebService) : PagingSource<Int, RickMorty>() {
+class RickyMortyPagingSource(private val webService: WebService) : PagingSource<Int, RickAndMorty>() {
 
-    override suspend fun load(params: LoadParams<Int>): LoadResult<Int, RickMorty> {
+    override suspend fun load(params: LoadParams<Int>): LoadResult<Int, RickAndMorty> {
 
         val currentPage = params.key ?: 1
 
@@ -30,7 +30,7 @@ class RickyMortyPagingSource(private val webService: WebService) : PagingSource<
         }
     }
 
-    override fun getRefreshKey(state: PagingState<Int, RickMorty>): Int? {
+    override fun getRefreshKey(state: PagingState<Int, RickAndMorty>): Int? {
         return state.anchorPosition
     }
 

@@ -4,17 +4,20 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/lucas/AndroidStudioProjects/RickAndMortyApi/app/src/main/res/drawable/fadein.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/lucas/AndroidStudioProjects/RickAndMortyApi/app/src/main/res/drawable/ic_back.xml" value="0.3277777777777778" />
         <entry key="..\:/Users/lucas/AndroidStudioProjects/RickAndMortyApi/app/src/main/res/drawable/ic_circle.xml" value="0.37083333333333335" />
         <entry key="..\:/Users/lucas/AndroidStudioProjects/RickAndMortyApi/app/src/main/res/drawable/shape_base_dialog.xml" value="0.35885416666666664" />
         <entry key="..\:/Users/lucas/AndroidStudioProjects/RickAndMortyApi/app/src/main/res/layout/activity_details.xml" value="0.35052083333333334" />
+        <entry key="..\:/Users/lucas/AndroidStudioProjects/RickAndMortyApi/app/src/main/res/layout/activity_favorites.xml" value="0.25" />
         <entry key="..\:/Users/lucas/AndroidStudioProjects/RickAndMortyApi/app/src/main/res/layout/activity_home.xml" value="0.2609375" />
         <entry key="..\:/Users/lucas/AndroidStudioProjects/RickAndMortyApi/app/src/main/res/layout/activity_main.xml" value="0.3536458333333333" />
         <entry key="..\:/Users/lucas/AndroidStudioProjects/RickAndMortyApi/app/src/main/res/layout/activity_splash.xml" value="0.33645833333333336" />
-        <entry key="..\:/Users/lucas/AndroidStudioProjects/RickAndMortyApi/app/src/main/res/layout/character_info_dialog.xml" value="0.33" />
+        <entry key="..\:/Users/lucas/AndroidStudioProjects/RickAndMortyApi/app/src/main/res/layout/character_info_dialog.xml" value="0.5" />
         <entry key="..\:/Users/lucas/AndroidStudioProjects/RickAndMortyApi/app/src/main/res/layout/character_layout.xml" value="0.33" />
         <entry key="..\:/Users/lucas/AndroidStudioProjects/RickAndMortyApi/app/src/main/res/layout/inc_toolbar.xml" value="0.3546875" />
         <entry key="..\:/Users/lucas/AndroidStudioProjects/RickAndMortyApi/app/src/main/res/layout/loader_layout.xml" value="0.35052083333333334" />
         <entry key="..\:/Users/lucas/AndroidStudioProjects/RickAndMortyApi/app/src/main/res/layout/view_character.xml" value="0.3546875" />
+        <entry key="..\:/Users/lucas/AndroidStudioProjects/RickAndMortyApi/app/src/main/res/layout/view_character_favorites.xml" value="0.3546875" />
       </map>
     </option>
   </component>

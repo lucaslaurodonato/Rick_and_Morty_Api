@@ -5,7 +5,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
-import com.lucasdonato.rickandmortyapi.data.model.RickMorty
+import com.lucasdonato.rickandmortyapi.data.model.RickAndMorty
 import com.lucasdonato.rickandmortyapi.data.repository.Repository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -21,13 +21,17 @@ class HomeViewModel @Inject constructor(private val repository: Repository) : Vi
         getAllCharacters()
     }
 
-    private val _getAll = MutableStateFlow<PagingData<RickMorty>>(PagingData.empty())
+    private val _getAll = MutableStateFlow<PagingData<RickAndMorty>>(PagingData.empty())
     val getAll = _getAll
 
     private fun getAllCharacters() = viewModelScope.launch {
         repository.getAllCharacters().cachedIn(viewModelScope).collect {
             _getAll.value = it
         }
+    }
+
+    fun addOnFavorites(rickAndMorty: RickAndMorty) = viewModelScope.launch {
+        repository.addOnDatabase(rickAndMorty)
     }
 
 }
