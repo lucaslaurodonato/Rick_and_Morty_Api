@@ -34,7 +34,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
 
     private fun setupRecyclerView() {
         binding.adapter = CharacterAdapter { item, _ ->
-
+            viewModel.addOnFavorites(item)
         }
     }
 

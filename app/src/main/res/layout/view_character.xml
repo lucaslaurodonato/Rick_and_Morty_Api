@@ -26,10 +26,10 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/iv_picture"
+                imageUrl="@{rickAndMorty.image}"
                 android:layout_width="0dp"
                 android:layout_height="200dp"
                 android:scaleType="fitXY"
-                imageUrl="@{rickAndMorty.image}"
                 app:layout_constraintBottom_toTopOf="@+id/tv_name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -48,18 +48,28 @@
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/lav_favorites"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/iv_picture"
                 tools:text="Rick" />
 
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lav_favorites"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_name"
+                app:layout_constraintTop_toTopOf="@+id/tv_name"
+                app:lottie_rawRes="@raw/heart_beat" />
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/iv_status"
+                changeColor="@{rickAndMorty.status}"
                 android:layout_width="12dp"
                 android:layout_height="12dp"
                 android:layout_margin="16dp"
                 android:src="@drawable/ic_circle"
-                changeColor="@{rickAndMorty.status}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_name"

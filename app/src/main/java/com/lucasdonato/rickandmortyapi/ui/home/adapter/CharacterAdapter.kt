@@ -41,14 +41,11 @@ class CharacterAdapter(private val onItemClick: ((item: RickAndMorty, index: Int
 
                 rickAndMorty = character
 
-                cvContainer.setOnClickListener {
+                lavFavorites.setOnClickListener {
+                    lavFavorites.playAnimation()
                     character?.let { result -> onItemClick?.invoke(result, position) }
                 }
 
-//                ivPicture.load(character?.image) {
-//                    crossfade(true)
-//                    crossfade(1000)
-//                }
             }
         }
     }
