@@ -14,33 +14,12 @@ import javax.inject.Inject
 
 @ExperimentalPagingApi
 class Repository @Inject constructor(
-    private val webService: WebService, private val database: FavoritesDatabase
+    private val webService: WebService
 ) {
 
     fun getAllCharacters(): Flow<PagingData<RickAndMorty>> {
         return Pager(config = PagingConfig(pageSize = 20),
             pagingSourceFactory = { RickyMortyPagingSource(webService) }).flow
-    }
-
-
-    suspend fun addOnDatabase(rickAndMorty: RickAndMorty) {
-        val rickAndMortyEntity = RickAndMortyEntity(
-            id = rickAndMorty.id,
-            name = rickAndMorty.name,
-            image = rickAndMorty.image,
-            species = rickAndMorty.species,
-            gender = rickAndMorty.gender,
-            status = rickAndMorty.status
-        )
-        database.favoritesDao.insert(rickAndMortyEntity)
-    }
-
-    suspend fun deleteOnDatabase(id: Int) {
-        database.favoritesDao.delete(id)
-    }
-
-    fun getAllFavorites() : List<RickAndMortyEntity> {
-        return database.favoritesDao.getAll()
     }
 
 }

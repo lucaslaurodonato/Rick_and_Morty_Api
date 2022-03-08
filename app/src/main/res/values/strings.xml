@@ -1,6 +1,9 @@
 <resources>
 
     <string name="app_name">Rick and Morty API</string>
+    <string name="favorites">Favorites</string>
+    <string name="favorites_error">There\'s nothing here</string>
+    <string name="add_on_favorites">Add on favorites list.</string>
     <string name="status_and_specie">%s - %s</string>
 
 </resources>

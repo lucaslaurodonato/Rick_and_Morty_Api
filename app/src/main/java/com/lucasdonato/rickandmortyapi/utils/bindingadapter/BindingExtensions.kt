@@ -5,6 +5,7 @@ import android.view.View.*
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.lucasdonato.rickandmortyapi.R
 import com.lucasdonato.rickandmortyapi.utils.constants.Constants
 import com.lucasdonato.rickandmortyapi.utils.extensions.setTint
@@ -21,7 +22,7 @@ fun View.setVisible(show: Boolean) {
 
 @BindingAdapter("imageUrl")
 fun loadImage(view: ImageView, url: String) {
-    Glide.with(view.context).load(url).into(view)
+    Glide.with(view.context).load(url).transition(DrawableTransitionOptions.withCrossFade(700)).into(view)
 }
 
 @BindingAdapter("changeColor")

@@ -16,6 +16,6 @@ interface FavoritesDao {
     suspend fun delete(id: Int)
 
     @Query("SELECT * FROM rickAndMortyEntity")
-    fun getAll(): List<RickAndMortyEntity>
+    suspend fun getAll(): List<RickAndMortyEntity>
 
 }

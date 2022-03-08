@@ -7,6 +7,7 @@ import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.lucasdonato.rickandmortyapi.data.model.RickAndMorty
 import com.lucasdonato.rickandmortyapi.data.repository.Repository
+import com.lucasdonato.rickandmortyapi.data.repository.RepositoryDataBase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.collect
@@ -15,7 +16,9 @@ import javax.inject.Inject
 
 @ExperimentalPagingApi
 @HiltViewModel
-class HomeViewModel @Inject constructor(private val repository: Repository) : ViewModel() {
+class HomeViewModel @Inject constructor(
+    private val repository: Repository, private val repositoryDataBase: RepositoryDataBase
+) : ViewModel() {
 
     init {
         getAllCharacters()
@@ -31,7 +34,7 @@ class HomeViewModel @Inject constructor(private val repository: Repository) : Vi
     }
 
     fun addOnFavorites(rickAndMorty: RickAndMorty) = viewModelScope.launch {
-        repository.addOnDatabase(rickAndMorty)
+        repositoryDataBase.addOnDatabase(rickAndMorty)
     }
 
 }

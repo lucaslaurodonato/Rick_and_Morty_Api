@@ -8,9 +8,11 @@ import androidx.lifecycle.lifecycleScope
 import androidx.paging.ExperimentalPagingApi
 import com.lucasdonato.rickandmortyapi.R
 import com.lucasdonato.rickandmortyapi.databinding.ActivityHomeBinding
+import com.lucasdonato.rickandmortyapi.ui.favorites.view.FavoritesActivity
 import com.lucasdonato.rickandmortyapi.ui.home.adapter.CharacterAdapter
 import com.lucasdonato.rickandmortyapi.ui.home.viewmodel.HomeViewModel
 import com.lucasdonato.rickandmortyapi.utils.base.BaseActivity
+import com.lucasdonato.rickandmortyapi.utils.extensions.toast
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -29,22 +31,25 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
         super.onCreate(savedInstanceState)
         setupRecyclerView()
         loadData()
-        closeApp()
+        startFavorites()
     }
 
     private fun setupRecyclerView() {
         binding.adapter = CharacterAdapter { item, _ ->
             viewModel.addOnFavorites(item)
+            toast(getString(R.string.add_on_favorites))
         }
-    }
-
-    private fun closeApp() {
-        binding.include.activity = this
     }
 
     private fun loadData() = lifecycleScope.launch {
         viewModel.getAll.collectLatest { pagingData ->
             binding.adapter?.submitData(pagingData)
+        }
+    }
+
+    private fun startFavorites() {
+        binding.incToolbar.ivFavorites.setOnClickListener {
+            startActivity(FavoritesActivity.getStartIntent(this))
         }
     }
 

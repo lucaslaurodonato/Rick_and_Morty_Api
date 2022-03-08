@@ -3,6 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="adapter"
+            type="com.lucasdonato.rickandmortyapi.ui.favorites.adapter.FavoritesCharactersAdapter" />
+
+        <variable
+            name="activity"
+            type="com.lucasdonato.rickandmortyapi.ui.favorites.view.FavoritesActivity" />
+
+        <variable
+            name="emptyVisible"
+            type="Boolean" />
+
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -12,21 +28,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:onClick="@{()-> activity.finish()}"
             android:src="@drawable/ic_back"
-            app:layout_constraintBottom_toTopOf="@+id/rv_favorites"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/inc_empty_state"
+            layout="@layout/include_empty_state"
+            visible="@{emptyVisible}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_back"
+            tools:visibility="gone" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_favorites"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:adapter="@{adapter}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_back"
-            app:spanCount="2"
+            app:spanCount="1"
             tools:listitem="@layout/view_character_favorites" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
