@@ -2,10 +2,9 @@
 
 ### **App made using Rick and Morty api**
 
-<img src="https://user-images.githubusercontent.com/47648982/156233229-197b6f4c-c77d-4165-b870-4cbe9a20df67.png" width="20%" hspace="10" style="max-width:40%;"/><img src="https://user-images.githubusercontent.com/47648982/156233230-e3a06d9c-4d7c-4987-b272-4b267f896975.png" width="20%" style="max-width:40%;"/> <img src="https://user-images.githubusercontent.com/47648982/157270516-69031482-0eb3-4e53-ac56-22b2efecb2cc.png" width="20%" style="max-width:40%;"/> <img src="https://user-images.githubusercontent.com/47648982/157270520-f4bcb2ef-3676-4b53-8261-005d835cc3de.png" width="20%" style="max-width:40%;"/> 
+<img src="https://user-images.githubusercontent.com/47648982/156233229-197b6f4c-c77d-4165-b870-4cbe9a20df67.png" width="20%" hspace="10" style="max-width:40%;"/><img src="https://user-images.githubusercontent.com/47648982/157291792-cda20d97-67bc-47f8-8137-7d01d61247c3.png" width="20%" style="max-width:40%;"/> <img src="https://user-images.githubusercontent.com/47648982/157270516-69031482-0eb3-4e53-ac56-22b2efecb2cc.png" width="20%" style="max-width:40%;"/> <img src="https://user-images.githubusercontent.com/47648982/157270520-f4bcb2ef-3676-4b53-8261-005d835cc3de.png" width="20%" style="max-width:40%;"/> 
 
 <p><a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/47648982/156235694-a701762f-21fb-4e61-aa4b-03c18bb476ab.gif"><img src="https://user-images.githubusercontent.com/47648982/156235694-a701762f-21fb-4e61-aa4b-03c18bb476ab.gif" align="right" width="20%" style="max-width:100%;"></a></p>
-
 
 
 ### :page_with_curl: *API*.  
